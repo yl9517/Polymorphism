@@ -16,6 +16,8 @@ class TragedyCalculator extends PerformanceCalculator {
     }
     return result;
   }
+
+  //volumeCredits()는 상위클래스 따라감
 }
 class ComedyCalculator extends PerformanceCalculator {
   get amount() {
@@ -26,7 +28,12 @@ class ComedyCalculator extends PerformanceCalculator {
     result += 300 * this.performance.audience;
     return result;
   }
+
+  get volumeCredits() {
+    return super.volumeCredits + Math.floor(this.performance.audience / 5);
+  }
 }
+
 function enrichPerformance(aPerformance) {
   const calculator = createPerformanceCalculator(
     aPerformance,
