@@ -5,13 +5,26 @@ function enrichPerformance(aPerformance) {
   );
   const result = Object.assign({}, aPerformance);
   result.play = calculator.play;
-  result.amount = amountFor(result);
+  result.amount = calculator.amount;
   result.volumeCredits = volumeCreditsFor(result);
   return result;
 }
 
 function playFor(aPerformance) {
   return plays[aPerformance.playID];
+  /**
+   * plays = {
+   *    1: {
+   *     _id: 1,
+   *     type: "tragedy"
+   *   },
+   *    2: {
+   *     _id: 2,
+   *     type: "comedy"
+   *   }
+   * }
+   *
+   * */
 }
 
 function amountFor(aPerformance) {
