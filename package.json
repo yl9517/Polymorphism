@@ -1,0 +1,33 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc && tsc-alias",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yl9517/typescript-boilerplate.git"
+  },
+  "author": "summer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yl9517/typescript-boilerplate/issues"
+  },
+  "homepage": "https://github.com/yl9517/typescript-boilerplate#readme",
+  "dependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.23.2",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "definition": {
+    "openapi": "3.0.3",
+    "info": {
+      "title": "Typescript Boilerplate with Swagger",
+      "version": "1.0.0",
+      "servers": [
+        {
+          "url": "http://localhost:3000"
+        }
+      ]
+    },
+    "components": {
+      "securitySchemes": {
+        "BearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT",
+          "name": "Authorization",
+          "in": "header"
+        }
+      }
+    }
+  },
+  "apis": ["**/*.ts"]
+}
